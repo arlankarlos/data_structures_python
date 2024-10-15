@@ -3,7 +3,6 @@
 import random
 
 
-
 class GraphGenerator:
     def __init__(self, vertices):
         self.vertices = vertices
