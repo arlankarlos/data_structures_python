@@ -107,7 +107,6 @@ python singly_linked_list.py
 
 <hr>
 
-<p>Feel free to customize this template to suit your needs. Add more sections like "Resources," "Acknowledgments," or "FAQ" if necessary.</p>
 
 </body>
 </html>
