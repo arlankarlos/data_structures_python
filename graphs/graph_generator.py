@@ -1,8 +1,7 @@
 # graph generator in Python
+# import sys, time
 import random
 
-# import time
-# import sys
 
 
 class GraphGenerator:
@@ -215,16 +214,10 @@ class GraphGenerator:
             "Best gen: %s - Custo: %d"
             % (str(melhor_individuo), get_evaluation(melhor_individuo))
         )
-        # print(f"Gen: {i + 1}:")
-        # print(
-        #     f"Best solution: {melhor_individuo} \
-        #     with evaluation {get_evaluation(melhor_individuo)}\n"
-        # )
 
 
 gerador = GraphGenerator(50)
 gerador.graph_generator()
-# gerador.print_graph()
 print("RANDOM")
 gerador.pcv_random(1000)
 print()
