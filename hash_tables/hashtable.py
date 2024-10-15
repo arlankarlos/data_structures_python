@@ -1,9 +1,9 @@
-import sys
+# hash table algorithm in python
 
 
 class HashTable:
     def __init__(self, table_size):
-        
+
         if table_size < 1:
             raise ValueError("Table size must be greater than 0")
         self.table_size = table_size
@@ -18,22 +18,21 @@ class HashTable:
 
     def insert(self, key):
         self.data[self.hash_func(key)].append(key)
-        
+
     def show(self):
         for linked_list in self.data:
             if linked_list:
                 for key in linked_list:
-                    print(f"{key}", end=' ')
-                print(' ')
+                    print(f"{key}", end=" ")
+                print(" ")
 
-    
     def search(self, key):
         if key in self.data[self.hash_func(key)]:
             return True
         else:
             return False
-        
-        
+
+
 data = HashTable(9)
 
 data.insert(19)

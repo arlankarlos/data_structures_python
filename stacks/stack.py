@@ -1,4 +1,4 @@
-# Pilha em Python - Stack
+# stack algorithm in Python - Stack
 from random import randint
 class Stack:
     def __init__(self):

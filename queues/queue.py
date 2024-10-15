@@ -1,4 +1,4 @@
-# Fila em Python - Queue
+# queue algorithm in Python - Queue
 from random import randint
 
 
