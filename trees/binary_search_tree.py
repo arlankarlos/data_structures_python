@@ -86,10 +86,10 @@ class BinarySearchTree:
         while current_node is not None:
             # verifica se encontrou o nó a ser removido
             if label == current_node.get_label():
-                
+
                 # caso 1: o nó a ser removido não possui filhos (só folha)
                 if current_node.get_left() is None and current_node.get_right() is None:
-                    
+
                     # verifica se é a raiz
                     if dad_node is None:
                         self.root = None
@@ -166,8 +166,8 @@ class BinarySearchTree:
                             smaller_node.set_left(self.root.get_left())
                         else:
                             """
-                                verifica se o smaller node é filho a esquer ou
-                                a direita para definir None o smaller_node
+                            verifica se o smaller node é filho a esquer ou
+                            a direita para definir None o smaller_node
                             """
                             if (
                                 dad_smaller_node.get_left()
@@ -185,13 +185,14 @@ class BinarySearchTree:
                         self.root = smaller_node
                     else:
                         """
-                            verifica se current_node é filho a esquerda ou a direita
-                            para definir o smaller_node como filho do pai do current_node
-                            (dad_node)
+                        verifica se current_node é filho a esquerda ou a direita
+                        para definir o smaller_node como filho do pai do current_node
+                        (dad_node)
                         """
                         if (
                             dad_node.get_left()
-                            and dad_node.get_left().get_label() == current_node.get_label()
+                            and dad_node.get_left().get_label()
+                            == current_node.get_label()
                         ):
                             dad_node.set_left(smaller_node)
                         else:
@@ -209,7 +210,7 @@ class BinarySearchTree:
                             dad_smaller_node.set_left(None)
                         else:
                             dad_smaller_node.set_right(None)
-                            
+
                         # define os filhos a direita e a esquerda de smaller_node
                         smaller_node.set_left(current_node.get_left())
                         smaller_node.set_right(current_node.get_right())
@@ -217,7 +218,7 @@ class BinarySearchTree:
 
             # atualiza o ponteiro para o pai do current_node
             dad_node = current_node
-            
+
             # verifica se vai para esquerda ou direita
             if label < current_node.get_label():
                 # vai para esquerda
@@ -225,7 +226,6 @@ class BinarySearchTree:
             else:
                 # vai para direita
                 current_node = current_node.get_right()
-                        
 
     def empty(self):
         if self.root is None:
@@ -245,17 +245,17 @@ class BinarySearchTree:
 
 # tests
 new_binary_search_tree = BinarySearchTree()
-cases = [8,3,1,6,4,7,10,14,13,9]
+cases = [8, 3, 1, 6, 4, 7, 10, 14, 13, 9]
 for i in cases:
     new_binary_search_tree.insert(i)
 print(new_binary_search_tree.get_root().get_label())
 new_binary_search_tree.show(new_binary_search_tree.get_root())
 new_binary_search_tree.remove(8)
-print('\n\n')
+print("\n\n")
 new_binary_search_tree.show(new_binary_search_tree.get_root())
 # new_binary_search_tree.remove(10)
-print('\n\n')
+print("\n\n")
 new_binary_search_tree.show(new_binary_search_tree.get_root())
 # new_binary_search_tree.remove(6)
-print('\n\n')
+print("\n\n")
 new_binary_search_tree.show(new_binary_search_tree.get_root())

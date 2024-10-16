@@ -59,7 +59,7 @@
         </ul>
     </li>
     <li><strong>Hash Tables</strong></li>
-    <li><strong>Tries</strong></li>
+    <li><strong>Various</strong></li>
     <li><strong>Disjoint Sets (Union-Find)</strong></li>
 </ul>
 
